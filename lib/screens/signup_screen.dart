@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/bording/onbording1.dart';
+import 'package:task_manager/stepper/stepper1.dart';
 import 'package:task_manager/widgets/common_widgets.dart';
 
 import 'login_screen.dart';
@@ -45,7 +46,9 @@ class _Signup_ScreenState extends State<Signup_Screen> {
             FormFild_Widget(hint_Text: "Enter Your Email",preIcon: Icons.email_outlined),
             SizedBox(height: 16,),
 
-            Custom_button(title: "Sign Up", onTap: (){},isOutline: true,)
+            Custom_button(title: "Sign Up", onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Stepper1_Screen(),));
+            },isOutline: true,)
 
 
 

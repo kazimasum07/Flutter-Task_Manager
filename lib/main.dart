@@ -3,6 +3,7 @@ import 'package:task_manager/bording/onbording2.dart';
 import 'package:task_manager/bording/onbording3.dart';
 import 'package:task_manager/screens/login_screen.dart';
 import 'package:task_manager/screens/splash_screen.dart';
+import 'package:task_manager/widgets/testing.dart';
 
 
 void main() {
