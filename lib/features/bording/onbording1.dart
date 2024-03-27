@@ -3,22 +3,26 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_manager/common/widgets/common_widgets.dart';
+import 'package:task_manager/features/authentication/login_screen.dart';
+import 'package:task_manager/features/authentication/signup_screen.dart';
 
 
-class On_Bording1 extends StatefulWidget {
-  const On_Bording1({Key? key}) : super(key: key);
+
+class OnBoarding1 extends StatefulWidget {
+  const OnBoarding1({super.key});
 
   @override
-  State<On_Bording1> createState() => _On_Bording1State();
+  State<OnBoarding1> createState() => _OnBoarding1State();
 }
 
-class _On_Bording1State extends State<On_Bording1> {
+class _OnBoarding1State extends State<OnBoarding1> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding: EdgeInsets.only(left: 16,right: 16),
+          padding: const EdgeInsets.only(left: 16,right: 16),
           color: backgroundClr,
           child: Stack(
 
@@ -40,30 +44,23 @@ class _On_Bording1State extends State<On_Bording1> {
                   )),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height: 432,),
+                   SizedBox(height: size.height*0.45,),
                   Text("Update Progress Your Work for The Team",style: mystyle(36,FontWeight.w700,textClrLight),),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   SvgPicture.asset('images/Slider.svg'),
-                  SizedBox(height: 20,),
-                  Custom_button(title: "Sign Up",onTap: () {}, isOutline: true
+                  const SizedBox(height: 20,),
+                  CustomButton(title: "Sign Up",onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_)=>const SignupScreen()));
+                  }, isOutline: true
                     ,),
-                  SizedBox(height: 10,),
-                  Custom_button(title: "Login",onTap: () {}, isOutline: false,),
-                  SizedBox(height: 10,)
-
-
-
-
+                  const SizedBox(height: 10,),
+                  CustomButton(title: "Login",onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>const LoginScreen()));
+                  }, isOutline: false,),
+                  const SizedBox(height: 10,)
                 ],
               )
-
-
-
-              //
-
-
             ],
           ),
         ),
@@ -72,13 +69,13 @@ class _On_Bording1State extends State<On_Bording1> {
   }
 }
 
-class Custom_button extends StatelessWidget {
- Custom_button({
-    Key? key,
+class CustomButton extends StatelessWidget {
+ CustomButton({
+    super.key,
     required this.title,
     required this.onTap,
     this.isOutline
-  }) : super(key: key);
+  });
 
   String ?title;
   VoidCallback ?onTap;

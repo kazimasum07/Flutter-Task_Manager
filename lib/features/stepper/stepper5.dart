@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:task_manager/common/widgets/common_widgets.dart';
+import 'package:task_manager/features/authentication/login_screen.dart';
 import 'package:task_manager/features/bording/onbording1.dart';
-import 'package:task_manager/features/screens/login_screen.dart';
+
 
 
 
@@ -40,9 +41,9 @@ class _Stepper5_ScreenState extends State<Stepper5_Screen> {
 
             Text("Email Member",style: mystyle(16,FontWeight.w400,formtextclr),),
             SizedBox(height: 12,),
-            FormFild_Widget(preIcon: Icons.key, hint_Text: "Type an email addrress"),
+            CustomFormFieldWidget(preIcon: Icons.key, hintText: "Type an email addrress"),
             SizedBox(height: 200,),
-            Custom_button(title: "Continue", onTap: (){
+            CustomButton(title: "Continue", onTap: (){
 
             },isOutline: true,)
 

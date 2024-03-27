@@ -7,14 +7,14 @@ import 'package:task_manager/common/widgets/common_widgets.dart';
 import 'onbording1.dart';
 
 
-class Onbording2_Screen extends StatefulWidget {
-  const Onbording2_Screen({Key? key}) : super(key: key);
+class OnBoarding2Screen extends StatefulWidget {
+  const OnBoarding2Screen({super.key});
 
   @override
-  State<Onbording2_Screen> createState() => _Onbording2_ScreenState();
+  State<OnBoarding2Screen> createState() => _OnBoarding2ScreenState();
 }
 
-class _Onbording2_ScreenState extends State<Onbording2_Screen> {
+class _OnBoarding2ScreenState extends State<OnBoarding2Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,10 +51,10 @@ class _Onbording2_ScreenState extends State<Onbording2_Screen> {
                   SizedBox(height: 30,),
                   SvgPicture.asset('images/Slider2.svg'),
                   SizedBox(height: 20,),
-                  Custom_button(title: "Sign Up",onTap: () {}, isOutline: true
+                  CustomButton(title: "Sign Up",onTap: () {}, isOutline: true
                     ,),
                   SizedBox(height: 10,),
-                  Custom_button(title: "Login",onTap: () {}, isOutline: false,),
+                  CustomButton(title: "Login",onTap: () {}, isOutline: false,),
                   SizedBox(height: 10,)
 
 

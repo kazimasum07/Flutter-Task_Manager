@@ -49,10 +49,10 @@ class _Onbording3_ScreenState extends State<Onbording3_Screen> {
                   SizedBox(height: 30,),
                   SvgPicture.asset('images/Slider3.svg'),
                   SizedBox(height: 20,),
-                  Custom_button(title: "Sign Up",onTap: () {}, isOutline: true
+                  CustomButton(title: "Sign Up",onTap: () {}, isOutline: true
                     ,),
                   SizedBox(height: 10,),
-                  Custom_button(title: "Login",onTap: () {}, isOutline: false,),
+                  CustomButton(title: "Login",onTap: () {}, isOutline: false,),
                   SizedBox(height: 10,)
 
 

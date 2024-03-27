@@ -5,74 +5,66 @@ import 'package:task_manager/features/bording/onbording1.dart';
 import 'signup_screen.dart';
 
 
-class Login_Screen extends StatefulWidget {
-  const Login_Screen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<Login_Screen> createState() => _Login_ScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _Login_ScreenState extends State<Login_Screen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    //Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 20, left: 18,right: 18),
-        height: double.infinity,
-        width: double.infinity,
+        padding: const EdgeInsets.only(top: 20, left: 18,right: 18),
+        height: size.height*1,
+        width: size.width*1,
         color: Colors.black,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Padding(
               padding: const EdgeInsets.only(top: 17,bottom: 17),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.close,size: 20,color: Colors.white,),
+                  const Icon(Icons.close,size: 20,color: Colors.white,),
                   GestureDetector(
                       onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Signup_Screen(),));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignupScreen(),));
                       },
                       child: Text("Sign Up",style: mystyle(16,FontWeight.w700,Colors.white),))
                 ],
               ),
             ),
-            SizedBox(height: 17,),
+            const SizedBox(height: 17,),
             Text("Your Email Address",style: mystyle(16,FontWeight.w400,formtextclr),),
-            SizedBox(height: 12,),
+            const SizedBox(height: 12,),
 
 
-            FormFild_Widget(hint_Text: "Enter Your Email",preIcon: Icons.email_outlined),
-            SizedBox(height: 16,),
+            CustomFormFieldWidget(hintText: "Enter Your Email",preIcon: Icons.email_outlined),
+            const SizedBox(height: 16,),
 
             Text("Your Password",style: mystyle(16,FontWeight.w400,formtextclr),),
             
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
 
 
-            FormFild_Widget(preIcon: Icons.key_sharp, hint_Text: "Enter Your Password"),
+            CustomFormFieldWidget(preIcon: Icons.key_sharp, hintText: "Enter Your Password"),
 
 
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
 
 
             ///Login Button ///
-            Custom_button(title: "Login", onTap: (){},isOutline: true, ),
+            CustomButton(title: "Login", onTap: (){},isOutline: true, ),
 
-            SizedBox(height: 26,),
+            const SizedBox(height: 26,),
             
             Center(child: Text("Forget Your Password",style: mystyle(16,FontWeight.w400,Colors.white),))
-            
-            
-            
-
-
-
-
-
 
           ],
         ),
@@ -82,34 +74,34 @@ class _Login_ScreenState extends State<Login_Screen> {
   }
 }
 
-class FormFild_Widget extends StatelessWidget {
-   FormFild_Widget({
-    Key? key,
+class CustomFormFieldWidget extends StatelessWidget {
+   CustomFormFieldWidget({
+    super.key,
      required this.preIcon,
-     required this.hint_Text
-  }) : super(key: key);
+     required this.hintText
+  });
 
-   String ?hint_Text;
+   String ?hintText;
   final IconData preIcon;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white),
       cursorColor: Colors.white,
       decoration: InputDecoration(
         fillColor: Colors.white,
         prefixIcon: Icon( preIcon,color: formtextclr ),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: formtextclr,
               width: 1,
             ),
             borderRadius: BorderRadius.circular(28),
 
           ),
-        hintText: hint_Text,
-          hintStyle: TextStyle(color: formtextclr)
+        hintText: hintText,
+          hintStyle: const TextStyle(color: formtextclr)
 
       ),
     );

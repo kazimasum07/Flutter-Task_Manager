@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:task_manager/common/widgets/common_widgets.dart';
+import 'package:task_manager/features/Authentication/login_screen.dart';
 import 'package:task_manager/features/bording/onbording1.dart';
-import 'package:task_manager/features/screens/login_screen.dart';
+
 
 import 'stepper5.dart';
 
@@ -41,9 +42,9 @@ class _Stepper4_ScreenState extends State<Stepper4_Screen> {
 
             Text("Code Team",style: mystyle(16,FontWeight.w400,formtextclr),),
             SizedBox(height: 12,),
-            FormFild_Widget(preIcon: Icons.email_outlined, hint_Text: "e.g JXHJKH"),
+            CustomFormFieldWidget(preIcon: Icons.email_outlined, hintText: "e.g JXHJKH"),
             SizedBox(height: 200,),
-            Custom_button(title: "Continue", onTap: (){
+            CustomButton(title: "Continue", onTap: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => Stepper5_Screen()));
             },isOutline: true,)
 
