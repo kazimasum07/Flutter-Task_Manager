@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:task_manager/widgets/common_widgets.dart';
+import 'package:task_manager/common/widgets/common_widgets.dart';
 
-class Homepage_Screen extends StatefulWidget {
-  const Homepage_Screen({Key? key}) : super(key: key);
+
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Homepage_Screen> createState() => _Homepage_ScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _Homepage_ScreenState extends State<Homepage_Screen> {
+class _HomeScreenState extends State<HomeScreen> {
   int currentIndex=0;
   @override
   Widget build(BuildContext context) {

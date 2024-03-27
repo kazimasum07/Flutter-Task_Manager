@@ -2,7 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_manager/widgets/common_widgets.dart';
+import 'package:task_manager/common/widgets/common_widgets.dart';
+
 
 class On_Bording1 extends StatefulWidget {
   const On_Bording1({Key? key}) : super(key: key);

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:task_manager/common/widgets/common_widgets.dart';
+import 'package:task_manager/features/bording/onbording1.dart';
+import 'package:task_manager/features/screens/login_screen.dart';
 
-import '../bording/onbording1.dart';
-import '../screens/login_screen.dart';
-import '../widgets/common_widgets.dart';
+
 
 class Stepper5_Screen extends StatefulWidget {
   const Stepper5_Screen({Key? key}) : super(key: key);

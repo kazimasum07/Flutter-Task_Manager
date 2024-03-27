@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/bording/onbording1.dart';
-import 'package:task_manager/screens/signup_screen.dart';
-import 'package:task_manager/widgets/common_widgets.dart';
+import 'package:task_manager/common/widgets/common_widgets.dart';
+import 'package:task_manager/features/bording/onbording1.dart';
+
+import 'signup_screen.dart';
 
 
 class Login_Screen extends StatefulWidget {

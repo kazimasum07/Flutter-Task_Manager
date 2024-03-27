@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:task_manager/widgets/common_widgets.dart';
+import 'package:task_manager/common/widgets/common_widgets.dart';
+
 
 import 'onbording1.dart';
 

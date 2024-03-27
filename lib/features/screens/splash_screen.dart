@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:task_manager/bording/onbording1.dart';
-import 'package:task_manager/widgets/common_widgets.dart';
+import 'package:task_manager/common/widgets/common_widgets.dart';
+import 'package:task_manager/features/bording/onbording1.dart';
+import 'package:task_manager/utils/constants/colors.dart';
+
 
 class Splash_Screen extends StatefulWidget {
   const Splash_Screen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
     return Scaffold(
       
       body: Container(
-        color: backgroundClr,
+        color: TMCustomColors.whiteColor,
         width: double.infinity,
         height: double.infinity,
         child: Column(
@@ -28,11 +29,14 @@ class _Splash_ScreenState extends State<Splash_Screen> {
               height: 96,
               width: 96,
               color: cardClr,
-              child: SvgPicture.asset('images/appicon.svg'),
+              child: SvgPicture.asset('assets/icons/appicon.svg'),
             ),
             Text("RANCANG",style: mystyle(36,FontWeight.w700,textClrLight),),
             Text("Your Personal Task Manager",style: mystyle(16,FontWeight.w400,textClrDark),),
-            SizedBox(height: 260,),
+            ElevatedButton(
+                onPressed: (){},
+                child: Text("Elevated Button"),
+            ),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => On_Bording1(),));
