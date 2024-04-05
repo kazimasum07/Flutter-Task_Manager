@@ -36,7 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   flutter_svg: ^2.0.10+1
-  firebase_auth: ^4.16.0
+  flutter_native_splash: ^2.4.0
+
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +66,6 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/images/
-    - assets/gifs/
     - assets/icons/
   #   - images/a_dot_ham.jpeg
 
